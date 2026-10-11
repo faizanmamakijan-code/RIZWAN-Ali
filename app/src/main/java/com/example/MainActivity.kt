@@ -32,9 +32,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.R
 import com.example.ui.theme.MyApplicationTheme
-import com.yandex.mobile.ads.common.AdRequest
-import com.yandex.mobile.ads.banner.BannerAdSize
-import com.yandex.mobile.ads.banner.BannerAdView
 
 data class Channel(val id: Int, val name: String, val imageResId: Int, val url: String)
 
@@ -78,12 +75,10 @@ class MainActivity : ComponentActivity() {
 fun HomeScreen(navController: NavController) {
     Scaffold(
         topBar = {
-            Column {
-                TopAppBar(
-                    title = { Text("Ptvsports", color = androidx.compose.ui.graphics.Color.Black) },
-                    colors = TopAppBarDefaults.topAppBarColors(containerColor = androidx.compose.ui.graphics.Color(0xFF87CEEB))
-                )
-            }
+            TopAppBar(
+                title = { Text("Ptvsports", color = androidx.compose.ui.graphics.Color.Black) },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = androidx.compose.ui.graphics.Color(0xFF87CEEB))
+            )
         }
     ) { innerPadding ->
         Row(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
